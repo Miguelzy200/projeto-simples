@@ -16,7 +16,7 @@ async def read_pdf(path):
     print(pdfContent)
 
 
-async def main():
+async def run():
     task1 = asyncio.create_task(random_print())
     task2 = asyncio.create_task(read_pdf("PdfTeste.pdf"))
 
@@ -24,4 +24,9 @@ async def main():
     await task2
 
 
-asyncio.run(main()) 
+def main() -> None:
+    asyncio.run(run())
+
+
+if __name__ == '__main__':
+    main()
