@@ -17,8 +17,9 @@ async def read_pdf(path):
 
 
 async def run():
+    pdfPath = input("Insira o caminho completo do pdf: ")
     task1 = asyncio.create_task(random_print())
-    task2 = asyncio.create_task(read_pdf("PdfTeste.pdf"))
+    task2 = asyncio.create_task(read_pdf(pdfPath))
 
     await task1
     await task2
